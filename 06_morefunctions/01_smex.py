@@ -1,40 +1,46 @@
-import math
 import random
+
 import matplotlib.pyplot as plt
 
-def create_random_points(n=50,m=200):
-    x=[]
-    y=[]
+# Εξομάλυνση πολυγώνου: κάθε νέα κορυφή είναι το μέσο δύο διαδοχικών.
+# Οι συναρτήσεις smooth() και plot() δουλεύουν με τις καθολικές λίστες x, y.
+
+
+def create_random_points(n=50, m=200):
+    x = []
+    y = []
     for i in range(n):
-        x += [float(random.randint(1,m))]
-        y += [float(random.randint(1,m))]
-    return x,y
+        x.append(float(random.randint(1, m)))
+        y.append(float(random.randint(1, m)))
+    return x, y
+
 
 def smooth():
     n = len(x)
-    xNew = []
-    yNew = []
-    for i in range(n-1):
-        xNew += [(x[i]+x[i+1])/2]
-        yNew += [(y[i]+y[i+1])/2]
-    xNew += [(x[0]+x[n-1])/2]
-    yNew += [(y[0]+y[n-1])/2]
-    return xNew,yNew
+    x_new = []
+    y_new = []
+    for i in range(n - 1):
+        x_new.append((x[i] + x[i + 1]) / 2)
+        y_new.append((y[i] + y[i + 1]) / 2)
+    x_new.append((x[0] + x[n - 1]) / 2)
+    y_new.append((y[0] + y[n - 1]) / 2)
+    return x_new, y_new
+
 
 def plot(r):
-    x1 = x+[x[0]]
-    y1 = y+[y[0]]
-    plt.plot([0,r+1,r+1,0,0],[0,0,r+1,r+1,0])
-    plt.plot(x1,y1)
+    x1 = x + [x[0]]
+    y1 = y + [y[0]]
+    plt.plot([0, r + 1, r + 1, 0, 0], [0, 0, r + 1, r + 1, 0])
+    plt.plot(x1, y1)
     plt.show()
 
 
 points = 30
 size = 100
 
-x,y=create_random_points(points,size)
-i=0
-while i<9:
-    i+=1
-    x,y = smooth()
+x, y = create_random_points(points, size)
+i = 0
+while i < 9:
+    i += 1
+    x, y = smooth()
     plot(size)

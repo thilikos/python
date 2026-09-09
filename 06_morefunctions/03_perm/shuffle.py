@@ -1,36 +1,33 @@
+import random
+
+import matplotlib.pyplot as plt
+
+# Τυχαία μετάθεση: διαλέγουμε επανειλημμένα ένα τυχαίο στοιχείο, το βάζουμε
+# στο αποτέλεσμα και το αφαιρούμε από τη λίστα.
 
 
-def supresszeros(a):
-    x = [];
-    l = len(a)
-    for i in range(l):
-        if a[i] > 0:
-            x += [a[i]]
-    return x
+def suppress_zeros(a):
+    return [v for v in a if v > 0]
+
 
 def shuffle(a):
-    import random
     b = []
     i = 1
     while i <= n:
-        r = random.randint(0,len(a)-1)
-        b += [a[r]]
-        a[r]=0
-        a = supresszeros(a)
-        i+=1
+        r = random.randint(0, len(a) - 1)
+        b.append(a[r])
+        a[r] = 0
+        a = suppress_zeros(a)
+        i += 1
     return b
 
-n=100
-a = range(1,n+1)
-a = shuffle(a)
+
+n = 100
+a = shuffle(list(range(1, n + 1)))
 print(a)
 
-b = range(1,n+1)
-b = shuffle(b)
+b = shuffle(list(range(1, n + 1)))
 print(b)
 
-
-
-import matplotlib.pyplot as plt
-plt.plot(a,b)
+plt.plot(a, b)
 plt.show()

@@ -1,21 +1,18 @@
+import matplotlib.pyplot as plt
+
 import rwalk
 
+# Χρησιμοποιεί τη συνάρτηση random_walk από το ξεχωριστό module rwalk.py
 
 st = []
 for i in range(40):
     allsteps = 0
     for j in range(100):
-        steps,ax,ay = rwalk.random_walk(i)
+        steps, ax, ay = rwalk.random_walk(i)
         allsteps += steps
-    st += [allsteps/100]
+    st.append(allsteps / 100)
 
 print(st)
 
-
-#print(steps)
-
-import matplotlib.pyplot as plt
 plt.plot(st)
 plt.show()
-
-
