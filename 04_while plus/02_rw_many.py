@@ -1,14 +1,18 @@
 import random
 
+import matplotlib.pyplot as plt
 
-st =[]
-for n in range(1,50):
+# Για διάφορα μεγέθη τετραγώνου n, μετράμε πόσα βήματα χρειάζεται ένας
+# τυχαίος περίπατος για να φτάσει στην άκρη.
+
+st = []
+for n in range(1, 50):
     steps = 0
-    x= 0
-    y= 0
-    ax=[x]
-    ay=[y]
-    while abs(x)<n and abs(y)<n:
+    x = 0
+    y = 0
+    ax = [x]
+    ay = [y]
+    while abs(x) < n and abs(y) < n:
         r = random.random()
         if r < 0.25:
             y += 1
@@ -19,19 +23,11 @@ for n in range(1,50):
         else:
             x -= 1
         steps += 1
-        ax = ax+[x]
-        ay = ay+[y]
-    st = st + [steps]
-#   print(ax)
-#   print(ay)
+        ax.append(x)
+        ay.append(y)
+    st.append(steps)
+
 print(st)
-
-
-
-import matplotlib.pyplot as plt
-
 
 plt.plot(st)
 plt.show()
-
-

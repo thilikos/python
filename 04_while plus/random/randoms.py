@@ -1,12 +1,13 @@
+import random
+
+
 def random_walk(n):
-    import random
-    x= 0
-    y= 0
-    ax=[x]
-    ay=[y]
+    x = 0
+    y = 0
+    ax = [x]
+    ay = [y]
     steps = 0
-    #
-    while abs(x)<n and abs(y)<n: #
+    while abs(x) < n and abs(y) < n:
         r = random.random()
         if r < 0.25:
             y += 1
@@ -17,6 +18,6 @@ def random_walk(n):
         else:
             x -= 1
         steps += 1
-        ax = ax+[x]
-        ay = ay+[y]
+        ax.append(x)
+        ay.append(y)
     return steps, ax, ay

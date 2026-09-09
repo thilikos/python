@@ -1,13 +1,13 @@
-    import matplotlib.pyplot as plt
 import random
 
+import matplotlib.pyplot as plt
 
+# Δύο ανεξάρτητες τυχαίες μεταθέσεις των αριθμών 0..999, σχεδιασμένες σαν σημεία
 
-x = range(1000)
+x = list(range(1000))
 random.shuffle(x)
-y = range(1000)
+y = list(range(1000))
 random.shuffle(y)
-#print(a)
 
-plt.plot(x,y,'.')
+plt.plot(x, y, '.')
 plt.show()
