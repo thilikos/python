@@ -1,0 +1,11 @@
+def bar(a, b=5, c=10):
+    print('a =', a, ', b =', b, ', c =', c)
+
+
+def foo(a, b=4, c=2):
+    print('a =', a, ', b =', b, ', c =', c)
+
+
+bar(100,2)
+
+foo(1,b=3,c=5)

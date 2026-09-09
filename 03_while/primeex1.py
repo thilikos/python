@@ -1,0 +1,1 @@
+import mathz = int(input('Please give me a number: '))a = []for r in range(3,z,2):    i = 2    isprime = True    while (i <= math.ceil(math.sqrt(r))):        if r%i==0 :            isprime = False        i+=1    if isprime:        a += [r]print("The vector is:",a)import matplotlib.pyplot as pltplt.plot(a)plt.show()
