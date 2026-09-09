@@ -1,14 +1,16 @@
 import random
-x = []
-y = []
-for i in range(10000):
-    x = x+[100*random.normalvariate(1,1)]
-    y = y+[100*random.normalvariate(1,1)]
-#    y = y+[random.randint(1,100)]
-print(x,y,len(x))
-
 
 import matplotlib.pyplot as plt
 
-plt.plot(x,y,".")
+# Νέφος 10000 σημείων με κανονική κατανομή στις δύο συντεταγμένες
+
+x = []
+y = []
+for i in range(10000):
+    x.append(100 * random.normalvariate(1, 1))
+    y.append(100 * random.normalvariate(1, 1))
+
+print(x, y, len(x))
+
+plt.plot(x, y, ".")
 plt.show()
