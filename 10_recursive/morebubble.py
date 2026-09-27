@@ -3,8 +3,8 @@ from random import shuffle
 
 sys.setrecursionlimit(1000000)
 
-# Ταξινόμηση φυσαλίδας, γραμμένη και επαναληπτικά (bubblesort) και
-# αναδρομικά (recbubble).
+# Ταξινόμηση φυσαλίδας, γραμμένη καὶ ἐπαναληπτικὰ (bubblesort) καὶ
+# ἀναδρομικὰ (recbubble).
 
 
 def find_illegal_pair(alist):

@@ -1,6 +1,6 @@
 from random import shuffle
 
-# Ταξινόμηση με συγχώνευση (merge sort), αναδρομικά.
+# Ταξινόμηση μὲ συγχώνευση (merge sort), ἀναδρομικά.
 
 
 def fusion(lefthalf, righthalf):

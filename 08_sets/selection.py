@@ -1,6 +1,6 @@
 import shuffle
 
-# Ταξινόμηση με επιλογή (selection sort), τυπώνοντας κάθε βήμα
+# Ταξινόμηση μὲ ἐπιλογὴ (selection sort), τυπώνοντας κάθε βῆμα
 
 
 def selection(v):

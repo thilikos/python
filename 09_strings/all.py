@@ -3,8 +3,8 @@ import russel
 import lebowski
 import genesis_old_testament
 
-# Ανάλυση κειμένου: μετράμε πόσο συχνά εμφανίζεται κάθε χαρακτήρας και
-# κάθε λέξη, και τα τυπώνουμε ταξινομημένα κατά φθίνουσα συχνότητα.
+# Ἀνάλυση κειμένου: μετρᾶμε πόσο συχνὰ ἐμφανίζεται κάθε χαρακτῆρας καὶ
+# κάθε λέξη, καὶ τὰ τυπώνουμε ταξινομημένα κατὰ φθίνουσα συχνότητα.
 
 
 def how_many_times(text, letter):
@@ -12,14 +12,14 @@ def how_many_times(text, letter):
     for c in text:
         if c == letter:
             i += 1
-    return i  # Ἀριθμὸς
+    return i  # Ἀριθμός
 
 
 def letters_number(text):  # Χρησιμοποιεῖ τὴν how_many_times
     d = dict()
     for c in set(text):
         d[c] = how_many_times(text, c)
-    return d  # Λεξικὸ
+    return d  # Λεξικό
 
 
 def return_keys(lex, value):
@@ -66,13 +66,13 @@ text = text.replace('  ', ' ')
 
 print(text)
 
-d = letters_number(text)  # λεξικό: κλειδί=χαρακτήρας, τιμή=πλήθος εμφανίσεων
-l = sorted(d.values(), reverse=True)  # πλήθη εμφανίσεων, φθίνουσα σειρά
-q = create_list(l, d)  # q[i] = [πλήθος, λίστα χαρακτήρων με αυτό το πλήθος]
+d = letters_number(text)  # λεξικό: κλειδί=χαρακτῆρας, τιμή=πλῆθος ἐμφανίσεων
+l = sorted(d.values(), reverse=True)  # πλήθη ἐμφανίσεων, φθίνουσα σειρά
+q = create_list(l, d)  # q[i] = [πλῆθος, λίστα χαρακτήρων μὲ αὐτὸ τὸ πλῆθος]
 
 words = text.split()  # λίστα
 
-dw = letters_number(words)  # λεξικό: κλειδί=λέξη, τιμή=πλήθος εμφανίσεων
+dw = letters_number(words)  # λεξικό: κλειδί=λέξη, τιμή=πλῆθος ἐμφανίσεων
 lw = sorted(dw.values(), reverse=True)
 qw = create_list(lw, dw)
 
@@ -80,7 +80,7 @@ qw = create_list(lw, dw)
 print('\n')
 
 print('Ἀριθμὸς χαρακτήρων:', len(text))
-print('Ἀριθμὸς πραγματικών χαρακτήρων:', len(d))
+print('Ἀριθμὸς πραγματικῶν χαρακτήρων:', len(d))
 print('\n')
 
 for i in q:
@@ -89,7 +89,7 @@ for i in q:
 print('\n')
 
 print('Ἀριθμὸς λέξεων:', len(words))
-print('Ἀριθμὸς πραγματικών λέξεων:', len(dw))
+print('Ἀριθμὸς πραγματικῶν λέξεων:', len(dw))
 print('\n')
 for i in qw:
     pct = i[0] / len(words) * 100

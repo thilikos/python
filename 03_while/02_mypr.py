@@ -1,6 +1,6 @@
 import math
 
-# Έλεγχος αν ένας αριθμός είναι πρώτος, με βρόχο while μέχρι τη ρίζα του
+# Ἔλεγχος ἂν ἕνας ἀριθμὸς εἶναι πρῶτος, μὲ βρόχο while μέχρι τὴ ρίζα του
 
 r = int(input('Please give me a number: '))
 isprime = True

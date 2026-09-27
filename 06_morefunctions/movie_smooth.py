@@ -5,7 +5,7 @@ matplotlib.use('TkAgg')
 from matplotlib import pyplot as plt
 from matplotlib import animation
 
-# Κινούμενη εξομάλυνση πολυγώνου με matplotlib.animation
+# Κινούμενη ἐξομάλυνση πολυγώνου μὲ matplotlib.animation
 
 
 # initialization function: plot the background of each frame

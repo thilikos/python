@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 import my_random_walk as myrw
 
-# Πείραμα: μέσο μήκος τυχαίου περιπάτου για μεγέθη τετραγώνου 0..n-1
+# Πείραμα: μέσο μῆκος τυχαίου περιπάτου γιὰ μεγέθη τετραγώνου 0..n-1
 
 
 def experiment(n=40, m=200):

@@ -4,7 +4,7 @@ import kondylis
 import russel
 import genesis_old_testament
 
-# Ίδια ανάλυση κειμένου με το all.py, σε άλλη πηγή κειμένου.
+# Ἴδια ἀνάλυση κειμένου μὲ τὸ all.py, σὲ ἄλλη πηγὴ κειμένου.
 
 
 def how_many_times(text, letter):
@@ -12,14 +12,14 @@ def how_many_times(text, letter):
     for c in text:
         if c == letter:
             i += 1
-    return i  # Ἀριθμὸς
+    return i  # Ἀριθμός
 
 
 def letters_number(text):  # Χρησιμοποιεῖ τὴν how_many_times
     d = dict()
     for c in set(text):
         d[c] = how_many_times(text, c)
-    return d  # Λεξικὸ
+    return d  # Λεξικό
 
 
 def return_keys(lex, value):
@@ -71,7 +71,7 @@ qw = create_list(lw, dw)
 print('\n')
 
 print('Ἀριθμὸς χαρακτήρων:', len(text))
-print('Ἀριθμὸς πραγματικών χαρακτήρων:', len(d))
+print('Ἀριθμὸς πραγματικῶν χαρακτήρων:', len(d))
 print('\n')
 
 for i in q:
@@ -80,7 +80,7 @@ for i in q:
 print('\n')
 
 print('Ἀριθμὸς λέξεων:', len(words))
-print('Ἀριθμὸς πραγματικών λέξεων:', len(dw))
+print('Ἀριθμὸς πραγματικῶν λέξεων:', len(dw))
 print('\n')
 for i in qw:
     pct = i[0] / len(words) * 100

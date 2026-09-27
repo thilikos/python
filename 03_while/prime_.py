@@ -2,8 +2,8 @@ import math
 
 import matplotlib.pyplot as plt
 
-# Για τους περιττούς r στο [3, z) κρατάμε ζεύγη (r, isprime) στη λίστα a
-# και τα σχεδιάζουμε.
+# Γιὰ τοὺς περιττοὺς r στὸ [3, z) κρατᾶμε ζεύγη (r, isprime) στὴ λίστα a
+# καὶ τὰ σχεδιάζουμε.
 
 z = int(input('Παρακαλῶ δῶσε μου ἕναν ἀριθμό: '))
 count = 0
@@ -18,7 +18,7 @@ for r in range(3, z, 2):
     count += isprime
     a += [r, isprime]
 
-print("Το διάνυσμα είναι:", a, "\n ")
+print("Τὸ διάνυσμα εἶναι:", a, "\n ")
 
 b = range(3, len(a) + 3)
 plt.plot(b, a)

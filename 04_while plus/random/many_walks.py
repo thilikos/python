@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 import randoms
 
-# Σχεδιάζει 10 τυχαίους περιπάτους, τον καθένα σε ξεχωριστό γράφημα
+# Σχεδιάζει 10 τυχαίους περιπάτους, τὸν καθένα σὲ ξεχωριστὸ γράφημα
 
 for r in range(10):
     steps, x, y = randoms.random_walk(100)

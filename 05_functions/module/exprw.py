@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 import rwalk
 
-# Χρησιμοποιεί τη συνάρτηση random_walk από το ξεχωριστό module rwalk.py
+# Χρησιμοποιεῖ τὴ συνάρτηση random_walk ἀπὸ τὸ ξεχωριστὸ module rwalk.py
 
 st = []
 for i in range(40):

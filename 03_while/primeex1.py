@@ -2,7 +2,7 @@ import math
 
 import matplotlib.pyplot as plt
 
-# Συλλογή των πρώτων αριθμών στο [3, z) και σχεδίασή τους
+# Συλλογὴ τῶν πρώτων ἀριθμῶν στὸ [3, z) καὶ σχεδίασή τους
 
 z = int(input('Please give me a number: '))
 a = []

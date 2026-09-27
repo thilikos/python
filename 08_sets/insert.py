@@ -1,6 +1,6 @@
 import shuffle
 
-# Ταξινόμηση με παρεμβολή (insertion sort), τυπώνοντας κάθε βήμα
+# Ταξινόμηση μὲ παρεμβολὴ (insertion sort), τυπώνοντας κάθε βῆμα
 
 
 def insertion(v):

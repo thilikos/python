@@ -2,8 +2,8 @@ from random import shuffle
 
 import matplotlib.pyplot as plt
 
-# Ταξινόμηση φυσαλίδας (bubble sort): μετράμε πόσες ανταλλαγές χρειάζονται
-# κατά μέσο όρο, για λίστες διαφόρων μεγεθών.
+# Ταξινόμηση φυσαλίδας (bubble sort): μετρᾶμε πόσες ἀνταλλαγὲς χρειάζονται
+# κατὰ μέσο ὅρο, γιὰ λίστες διαφόρων μεγεθῶν.
 
 
 def find_illegal_pair(alist):
