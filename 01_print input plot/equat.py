@@ -1,14 +1,14 @@
-# Ελαχιστοποίηση της συνάρτησης f(x) = x^2 + b*x + c στο διάστημα [L, R]
+# Ἐλαχιστοποίηση τῆς συνάρτησης f(x) = x^2 + b*x + c στὸ διάστημα [L, R]
 
-b = float(input('Δώσε το b: '))
-c = float(input('Δώσε το c: '))
-L = float(input('Δώσε το L: '))
-R = float(input('Δώσε το R, με L<R: '))
+b = float(input('Δῶσε τὸ b: '))
+c = float(input('Δῶσε τὸ c: '))
+L = float(input('Δῶσε τὸ L: '))
+R = float(input('Δῶσε τὸ R, μὲ L<R: '))
 
-print(f'Εξίσωση: x^2+bx+c, b = {b:.2f} , c = {c:.2f}')
+print(f'Ἐξίσωση: x^2+bx+c, b = {b:.2f} , c = {c:.2f}')
 print(f'Διάστημα: [L,R], L = {L:.2f} , R = {R:.2f}')
 
-# Υπολογισμός κρίσιμου σημείου
+# Ὑπολογισμὸς κρίσιμου σημείου
 xc = -b / 2
 if xc < L:
     xmin = L
@@ -18,5 +18,5 @@ else:
     xmin = R
 
 fmin = xmin**2 + b*xmin + c
-print(f'x ελαχιστοποίησης = {xmin:.2f}')
-print(f'Ελάχιστη τιμή της f = {fmin:.2f}')
+print(f'x ἐλαχιστοποίησης = {xmin:.2f}')
+print(f'Ἐλάχιστη τιμὴ τῆς f = {fmin:.2f}')
