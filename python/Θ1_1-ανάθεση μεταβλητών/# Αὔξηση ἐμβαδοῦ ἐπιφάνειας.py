@@ -19,12 +19,6 @@ print(f'\n\tΜέθοδος 1: {delta_A1:15.7f} τετρ/κά μέτρα')
 delta_A2 = (4*math.pi*(2*r + dr)*dr) * 10**6
 print(f'\tΜέθοδος 2: {delta_A2:15.7f} τετρ/κά μέτρα')
 
-
 # Μέθοδος 3
 delta_A3 = (8*math.pi*r*dr) * 10**6
 print(f'\tΜέθοδος 3: {delta_A3:15.7f} τετρ/κά μέτρα')
-
-
-
-
-
