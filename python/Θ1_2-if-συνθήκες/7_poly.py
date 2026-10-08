@@ -33,3 +33,30 @@ else:
         print('Τὸ πολυώνυμο q(x) εἶναι ἁπλό')
     else:
         print('Τὸ πολυώνυμο q(x) δὲν εἶναι ἁπλό')
+
+
+
+
+# Σχεδίαση τῆς γραφικῆς παράστασης τοῦ q(x)
+import numpy as np
+import matplotlib.pyplot as plt
+
+x0 = -b / (3*a)          # σημεῖο καμπῆς, ἐκεῖ ποὺ q''(x)=0
+if discriminant > 0:
+    w = max(2, 1.5 * abs(r1 - r2))
+else:
+    w = 3
+x = np.linspace(x0 - w, x0 + w, 400)
+y = a*x**3 + b*x**2 + c*x + d
+
+plt.plot(x, y, label='q(x)')
+plt.axhline(0, color='black', linewidth=0.8)
+plt.axvline(0, color='black', linewidth=0.8)
+if discriminant > 0:
+    plt.plot([r1, r2], [qr1, qr2], 'ro', label='τοπικὰ ἀκρότατα')
+plt.title(f'q(x) = {a:.2f}x³ + {b:.2f}x² + {c:.2f}x + {d:.2f}')
+plt.xlabel('x')
+plt.ylabel('q(x)')
+plt.grid(True)
+plt.legend()
+plt.show()
