@@ -1,24 +1,32 @@
-# Script Eg3_2
-# Fibonacci numbers and the Golden Ratio
+import matplotlib.pyplot as plt
 
-# Initializations
-print('   n        f_n             r_n  ')
-print('---------------------------------------')
-tol = 10**-15
-n = 2
-f_old = 1                 # n-1-st  Fibonacci number
-f_cur = 1                 # n-th    Fibonacci number
-f_new = 2                 # n+1-st  Fibonacci number
-r_cur = f_cur/f_old       # n-th    Golden Ratio estimate
-r_new = f_new/f_cur       # n+1-st  Golden Ratio estimate
-print(f'  {n:2d}   {f_cur:8d}    {r_cur:20.15f} ')
+# Κόσκινο του Ερατοσθένη: a[k] == k αν ο k είναι πρώτος, αλλιώς a[k] == 0.
 
-while abs(r_new - r_cur) > tol:
-    # Increase n and update...
-    n = n + 1
-    f_old = f_cur
-    f_cur = f_new
-    f_new = f_old + f_cur
-    r_cur = r_new
-    r_new = f_new/f_cur
-    print(f'  {n:2d}   {f_cur:8d}    {r_cur:20.15f} ')
+z = 100
+a = [0, 0] + list(range(2, z + 1))
+j = 2
+# Αρκεί να φτάσουμε ως τη ρίζα του z, και το σβήσιμο αρχίζει από το j*j:
+# τα 2j, 3j, ..., (j-1)j τα έχουν ήδη σβήσει οι μικρότεροι πρώτοι.
+
+while j * j <= z:
+    while j * j <= z and a[j] == 0:
+        j += 1
+    if j * j <= z:
+            for i in range(j * j, z + 1, j):
+                a[i] = 0
+            j += 1
+
+maxn = 0
+
+i = 2
+while i<=z:
+    j = 0 
+    while i+j<=z and a[i+j]==0:
+        j += 1
+    maxn = max(j,maxn)
+    i = i+j+1
+
+print(maxn)
+
+
+     
