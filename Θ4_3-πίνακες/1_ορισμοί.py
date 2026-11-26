@@ -12,12 +12,39 @@ def shape(M):
     return len(M), len(M[0])     # (πλῆθος γραμμῶν, πλῆθος στηλῶν)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def print_matrix(M):
     for row in M:
         for x in row:
             print(x, end='\t')     # '\t' = tab: στοιχίζει τὶς στῆλες
         print()
     print()
+
+
+
+
+
+
 
 
 print('A =')
@@ -28,6 +55,14 @@ print('γραμμὴ 0 :', A[0])                                 # μιὰ γρ�
 print('στήλη 1  :', [A[i][1] for i in range(len(A))])     # μιὰ στήλη τὴ "μαζεύουμε"
 print()
 
+
+
+
+
+
+
+
+
 # ---------------------------------------------- Διάσχιση: δύο ἔνθετοι βρόχοι
 rows, cols = shape(A)
 for i in range(rows):
@@ -36,11 +71,19 @@ for i in range(rows):
     print()
 print()
 
+
+
+
+
+
 # ------------------------------------------------------ Δημιουργία πινάκων
 Z = [[0] * 4 for i in range(3)]          # ΣΩΣΤΟ: κάθε γραμμὴ εἶναι ΝΕΑ λίστα
 Z[0][0] = 99
-print('Z (σωστά):')
 print_matrix(Z)
+
+
+
+
 
 
 
@@ -49,8 +92,8 @@ I = [[1 if i == j else 0 for j in range(n)] for i in range(n)]       # μονα�
 print('Μοναδιαῖος πίνακας I:')
 print_matrix(I)
 
-T = [[i * j for j in range(1, 10)] for i in range(1, 10)]           # προπαίδεια
-print('Ὁ πίνακας τῆς προπαίδειας T[i][j] = (i+1)(j+1):')
+T = [[i * j for j in range(10)] for i in range(10)]           # προπαίδεια
+print('Ὁ πίνακας τῆς προπαίδειας')
 print_matrix(T)
 
 # --------------------------------------------- Ἀθροίσματα, μέγιστο, διαγώνιος
@@ -84,10 +127,3 @@ for i in range(rows):
 print('A^T =')
 print_matrix(AT)
 print()
-
-# Συμμετρικὸς πίνακας: S[i][j] == S[j][i] γιὰ ὅλα τὰ i, j
-S = [[2, 1, 0],
-     [1, 3, 4],
-     [0, 4, 5]]
-symmetric = all(S[i][j] == S[j][i] for i in range(3) for j in range(3))
-print('Ὁ S εἶναι συμμετρικός;', symmetric)
